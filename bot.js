@@ -92,9 +92,10 @@ function splitMessage(text, maxLength = 2000) {
   return chunks;
 }
 
-client.once("ready", () => {
+client.once("clientReady", () => {
   console.log(`Logged in as ${client.user.tag}`);
   console.log(`LM Studio endpoint: ${LM_STUDIO_URL}`);
+  console.log(`System prompt: ${SYSTEM_PROMPT}`);
 });
 
 client.on("messageCreate", async (message) => {
